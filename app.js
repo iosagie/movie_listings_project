@@ -7,16 +7,28 @@ const options = {
   },
 };
 
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(err => {
-    console.error(err);
-});
+// .then(response => response.json())
+// .then(data => console.log(data))
+// .catch(err => {
+//     console.error(err);
+// });
 
-try {
-  const response = await fetch(url, options);
-  const result = await response.text();
-  console.log(result);
-} catch (error) {
-  console.error(error);
+// try {
+//   const response = await fetch(url, options);
+//   const result = await response.text();
+//   console.log(result);
+// } catch (error) {
+//   console.error(error);
+// }
+
+async function getData(url, options) {
+  try {
+    let response = await fetch(url, options);
+    let result = await response.json();
+    console.log(result);
+  } catch (error) {
+    console.error(error);
+  }
 }
+
+getData(url, options);
