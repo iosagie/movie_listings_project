@@ -6,6 +6,10 @@
 --champagne-pink: #e3d5caff;
 --pale-dogwood: #d5bdafff;
 */
+
+* {
+  background-color: #edede9 !important;
+}
 #div {
   background-color: #f5ebe0ff;
 }
